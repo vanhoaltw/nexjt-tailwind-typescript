@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-1: #01080e;
+  --primary-2: #011627;
+  --primary-3: #011627;
+
+  --secondary-gray: #607b96;
+  --secondary-green: #3c9d93;
+  --secondary-blue: #4d5bce;
+  --secondary-white: #ffffff;
+
+  --accent-1: #fea55f;
+  --accent-2: #43d9ad;
+  --accent-3: #e99287;
+  --accent-4: #c98bdf;
+
+  --lines: #1E2D3D;
+  --gradient-blue: #4D5BCE;
+  --gradient-green: #43D9AD;
+
+  --font-primary: #ffffff;
+  --font-link: #4D5BCE;
+
+  --success: #43D9AD;
+  --warning: #fea55f;
+  --danger: #e99287;
+
+  --dark: #01080e;
+  --light: #ffffff;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: optional;
+    src: url('/fonts/inter-var-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
+
+  h1,
+  .h1 {
+    @apply text-font-primary text-2xl font-bold md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-font-primary text-xl font-bold md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-font-primary text-lg font-bold md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-font-primary text-base font-bold md:text-lg;
+  }
+
+  a,
+  .a {
+    @apply text-font-link text-base;
+  }
+
+  body,
+  .p {
+    @apply text-font-primary text-sm md:text-base;
+  }
+
+  .layout {
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  .min-h-main {
+    @apply min-h-[calc(100vh-56px)];
+  }
+}
